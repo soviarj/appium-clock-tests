@@ -65,60 +65,58 @@ Make sure these are set:
 
 Clone the repository:
 
+```bash
 git clone https://github.com/your-username/android-clock-tests.git
 cd android-clock-tests
+```
 
 Install dependencies:
 
+```bash
 npm install
+```
 
 🚀 Running Tests
 
 Start Appium server (in separate terminal):
+```bash
 appium
+```
 
 Run all tests:
+```bash
 npx wdio run wdio.conf.ts
+```
 
-Run specific test file:
-npx wdio run wdio.conf.ts --spec test/specs/clock.e2e.ts
 
 🧪 Test Cases
 
 1. Verify current time format
-Opens Clock app
-Reads current time
-Validates format HH:MM
+- Opens Clock app
+- Reads current time
+- Validates format HH:MM
 
 2. Add and remove a world clock (New York)
-Opens Clock app
-Adds "New York" to world clock list
-Verifies it is displayed
-Removes it (or toggles state)
-Verifies it is no longer displayed
-
-📁 Project Structure
-
-test/
- ├── specs/
- │    └── clock.e2e.ts
- ├── pageobjects/
- │    └── clock.page.ts
+- Opens Clock app
+- Adds "New York" to world clock list
+- Verifies it is displayed
+- Removes it (or toggles state)
+- Verifies it is no longer displayed
 
 ⚠️ Notes / Known Issues
 
-Android UI can be flaky depending on emulator/device performance
-Some elements may require longer waits (waitForDisplayed)
-Tests are sensitive to UI changes in the Clock app (Google updates)
+- Android UI can be flaky depending on emulator/device performance
+- Some elements may require longer waits (waitForDisplayed)
+- Tests are sensitive to UI changes in the Clock app (Google updates)
 
 🛠 Troubleshooting
 
-Appium cannot find elements
-Ensure correct resource-id or UI selector
-Increase timeout values
-Add waitForDisplayed() before interaction
+- Appium cannot find elements
+- Ensure correct resource-id or UI selector
+- Increase timeout values
+- Add waitForDisplayed() before interaction
 
-Emulator issues
-Restart emulator
-Clear app data
-Reinstall app if needed
+- Emulator issues
+- Restart emulator
+- Clear app data
+- Reinstall app if needed
